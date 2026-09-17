@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+/* Soli — Premium Dark Legal Workstation */
+:root {
+  /* App shell */
+  --soli-bg: #0B0C0F;
+  --soli-bg-subtle: #0D0F12;
+  --soli-sidebar: #101216;
+  --soli-nav: #0E1014;
+  --soli-surface: #151820;
+  --soli-surface-hover: #1A1E26;
+  --soli-surface-raised: #191C23;
+  --soli-surface-elevated: #1E222B;
+
+  /* Borders */
+  --soli-border: #1F242E;
+  --soli-border-subtle: #1A1F29;
+  --soli-border-strong: #252A33;
+
+  /* Text */
+  --soli-text: #F1F2F3;
+  --soli-text-secondary: #9AA0A8;
+  --soli-text-muted: #6B7280;
+  --soli-text-faint: #4B5563;
+
+  /* Brand */
+  --soli-accent: #6366F1;
+  --soli-accent-strong: #4F46E5;
+  --soli-accent-soft: rgba(99,102,241,0.12);
+  --soli-accent-border: rgba(99,102,241,0.22);
+
+  /* Semantic */
+  --soli-success: #22C55E;
+  --soli-warning: #F59E0B;
+  --soli-danger: #EF4444;
+
+  --soli-radius-sm: 8px;
+  --soli-radius-md: 10px;
+  --soli-radius-lg: 12px;
+  --soli-radius-xl: 14px;
+}
+
+* { scrollbar-width: thin; scrollbar-color: #252A33 transparent; }
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #252A33; border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: #2E3440; }
+
+html, body {
+  background: var(--soli-bg);
+  color: var(--soli-text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
+}
+
+::selection { background: rgba(99,102,241,0.3); }
+
+@keyframes soliIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+.animate-soli-in { animation: soliIn .18s ease forwards; }
+
+/* Focus */
+*:focus-visible { outline: 2px solid var(--soli-accent); outline-offset: 2px; }
